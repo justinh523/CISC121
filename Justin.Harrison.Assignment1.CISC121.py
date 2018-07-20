@@ -1,10 +1,4 @@
 '''
-Justin Harrison - 2002508
-Assignment 1 solution written for CISC 121
-Professor: Paul Allison
-Date: July 9th 2018
-
-
 This is the Word Blitz game that will allow a player to compete in a wheel of fortune/hangman
 hybrid against a human or a computer opponent in order to win money. I have organized the program
 into the classes of administrator and player. The administrator class contains methods that allow 
@@ -518,7 +512,7 @@ whichever player has the most money!\n''')
         
 
 '''
-This function was posted on the CISC121 OnQ page to help with file loading and the initialization
+This functions help with file loading and the initialization
 of a list of puzzles. The filename will have to be modified depending on the file being loaded
 '''
 def loadPuzzles(filename='wordblitzclues.txt'):
@@ -529,12 +523,8 @@ def loadPuzzles(filename='wordblitzclues.txt'):
     fileClues.close()
     return lisClues
 
-'''
-This function was posted on the CISC121 OnQ pade to initialize the hint and the secret word from the 
-preivously generated list of puzzles. I was getting errors saying that the randomIndex generated
-was out of the puzzleLis index range, so I changed the range of the randint to (0,len(puzzleLis)-1)
-instead of (1,len(puzzleLis)) as was posted. The returned hint and secret_word are assigned to the 
-admin.hint and admin.secret parameters in the Administration __init__ method above.
+'''IThis function was posted on the CISC121 OnQ pade to initialize the hint and the secret word from the 
+preivously generated list of puzzles.
 '''
 def getRandomPuzzle(puzzleLis):
     randomIndex = random.randint(0,len(puzzleLis)-1)
